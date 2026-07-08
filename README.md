@@ -5,9 +5,9 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 ## Labs
 | Lab | Description | Tech |
 |---|---|---|
-| [`calculator-gradle-main`](./lab-1) | Building and packaging a Java calculator app with Gradle | Java 17, Gradle, JUnit 5 |
-| [`calculator-maven-main`](./lab-2) | Building and packaging a Java calculator app with Maven | Java 17, Maven, JUnit 5 |
-| [`Docker-1-main`](./lab-3&4) | Dockerizing a Spring Boot REST app with a secure, non-root runtime image | Java 17, Spring Boot, Docker |
+| [`lab-1`](./lab-1) | Building and packaging a Java calculator app with Gradle | Java 17, Gradle, JUnit 5 |
+| [`lab-2`](./lab-2) | Building and packaging a Java calculator app with Maven | Java 17, Maven, JUnit 5 |
+| [`lab-3&4`](./lab-3&4) | Dockerizing a Spring Boot REST app with a secure, non-root runtime image | Java 17, Spring Boot, Docker |
 | [`lab-5`](./lab-5) | Multi-stage Docker build for a Spring Boot app | Java 17, Spring Boot, Docker |
 | [`lab-6`](./lab-6) | Managing Docker environment variables across build and runtime | Python, Flask, Docker |
 
