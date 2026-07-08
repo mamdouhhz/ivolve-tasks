@@ -1,6 +1,6 @@
 # ivolve-tasks
 
-A collection of hands-on DevOps and Java build/containerization labs, completed as part of the NTI DevOps program (Hire Ready Initiative).
+A collection of hands-on DevOps and Java build/containerization labs, completed as part of the NTI DevOps program (Hire Ready scholarship) internship at ivolve company.
 
 Each folder is a standalone lab with its own README, prerequisites, and run instructions.
 
