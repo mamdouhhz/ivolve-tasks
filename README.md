@@ -1,184 +1,49 @@
 # ivolve-tasks
 
-# Java Build Automation Labs – Gradle & Maven
+A collection of hands-on DevOps and Java build/containerization labs, completed as part of the NTI DevOps program (Hire Ready Initiative).
+
+Each folder is a standalone lab with its own README, prerequisites, and run instructions.
+
+## Labs
+
+| Lab | Description | Tech |
+|---|---|---|
+| [`calculator-gradle-main`](./calculator-gradle-main) | Building and packaging a Java calculator app with Gradle | Java 17, Gradle, JUnit 5 |
+| [`calculator-maven-main`](./calculator-maven-main) | Building and packaging a Java calculator app with Maven | Java 17, Maven, JUnit 5 |
+| [`Docker-1-main`](./Docker-1-main) | Dockerizing a Spring Boot REST app with a secure, non-root runtime image | Java 17, Spring Boot, Docker |
 
 ## Overview
 
-This repository contains two hands-on labs demonstrating how to build, test, package, and run Java applications using the two most popular Java build automation tools:
+These labs progress from core Java build tooling to containerization:
 
-* **Gradle**
-* **Maven**
-
-The objective is to understand the Java build lifecycle, dependency management, unit testing, and artifact generation.
-
----
-
-# Lab 1 – Building and Packaging with Gradle
+1. **Gradle & Maven labs** — understanding the Java build lifecycle: compiling, testing, dependency management, and generating runnable jar artifacts using the two most common JVM build tools.
+2. **Docker lab** — taking a Spring Boot application and packaging it into a minimal, secure container image, including non-root user configuration and image size optimization.
 
 ## Prerequisites
 
-* Java JDK 17
-* Gradle
+Varies per lab — see each lab's own README for exact versions and setup. In general:
 
-Verify the installation:
+- Java JDK 17
+- Gradle and/or Maven
+- Docker
 
-```bash
-java -version
-javac -version
-gradle -version
-```
+## Repository Structure
+ivolve-tasks
+├── README.md  # this file
+├── lab-1/     # Gradle build lab
+├── lab-2/     # Maven build lab
+└── lab-3&4/   # Docker containerization lab
 
----
+## Learning Outcomes
 
-## Clone the Repository
+Across these labs:
 
-```bash
-git clone https://github.com/Ibrahim-Adel15/calculator-gradle.git
-cd calculator-gradle
-```
+- Configuring and running Java builds with both Gradle and Maven
+- Writing and executing automated unit tests (JUnit 5)
+- Generating runnable jar artifacts
+- Writing a production-conscious Dockerfile (non-root user, slim runtime base)
+- Building, running, and verifying a containerized service
 
----
+## Author
 
-## Run Unit Tests
-
-```bash
-gradle clean test
-```
-
-Expected output:
-
-```
-BUILD SUCCESSFUL
-```
-
----
-
-## Build the Application
-
-```bash
-gradle build
-```
-
-Generated artifact:
-
-```
-build/libs/calculator.jar
-```
-
----
-
-## Run the Application
-
-```bash
-java -jar build/libs/calculator.jar
-```
-
----
-
-# Lab 2 – Building and Packaging with Maven
-
-## Prerequisites
-
-* Java JDK 17
-* Apache Maven
-
-Verify the installation:
-
-```bash
-java -version
-mvn -version
-```
-
----
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/Ibrahim-Adel15/calculator-maven.git
-cd calculator-maven
-```
-
----
-
-## Run Unit Tests
-
-```bash
-mvn test
-```
-
-Expected output:
-
-```
-BUILD SUCCESS
-```
-
----
-
-## Build the Application
-
-```bash
-mvn package
-```
-
-Generated artifact:
-
-```
-target/calculator.jar
-```
-
----
-
-## Run the Application
-
-```bash
-java -jar target/calculator.jar
-```
-
----
-
-# Project Structure
-
-## Gradle
-
-```
-calculator-gradle
-├── build.gradle
-├── settings.gradle
-├── src
-│   ├── main
-│   └── test
-└── build
-```
-
-## Maven
-
-```
-calculator-maven
-├── pom.xml
-├── src
-│   ├── main
-│   └── test
-└── target
-```
-
----
-
-# Technologies Used
-
-* Java 17
-* Gradle
-* Maven
-* JUnit
-
----
-
-# Learning Outcomes
-
-After completing these labs, you will be able to:
-
-* Install and configure Java build tools.
-* Execute automated unit tests.
-* Build Java applications.
-* Generate executable JAR artifacts.
-* Run Java applications from the command line.
-* Understand the differences between Gradle and Maven build systems.
+Mamdouh ([@mamdouhhz](https://github.com/mamdouhhz))
