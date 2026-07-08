@@ -27,13 +27,6 @@ Varies per lab — see each lab's own README for exact versions and setup. In ge
 - Gradle and/or Maven
 - Docker
 
-## Repository Structure
-ivolve-tasks
-├── README.md  # this file
-├── lab-1/     # Gradle build lab
-├── lab-2/     # Maven build lab
-└── lab-3&4/   # Docker containerization lab
-
 ## Learning Outcomes
 
 Across these labs:
