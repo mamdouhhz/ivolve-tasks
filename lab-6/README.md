@@ -32,7 +32,7 @@ The `ENV` values here act as defaults (production/canada-west) that are used whe
 ## Build
 
 ```bash
-docker build -t docker3-app .
+docker build -t python-app .
 ```
 
 ## Run – Three Ways to Set Environment Variables
