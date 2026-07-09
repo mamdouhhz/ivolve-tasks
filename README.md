@@ -10,6 +10,8 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 | [`lab-3&4`](./lab-3&4) | Dockerizing a Spring Boot REST app with a secure, non-root runtime image | Java 17, Spring Boot, Docker |
 | [`lab-5`](./lab-5) | Multi-stage Docker build for a Spring Boot app | Java 17, Spring Boot, Docker |
 | [`lab-6`](./lab-6) | Managing Docker environment variables across build and runtime | Python, Flask, Docker |
+| [`lab-7`](./lab-7) | Docker volumes and bind mounts with Nginx | Docker, Nginx |
+| [`lab-8`](./lab-8) | Custom Docker network for microservice communication | Python, Flask, Docker |
 
 ## Overview
 These labs progress from core Java build tooling to containerization:
@@ -18,14 +20,16 @@ These labs progress from core Java build tooling to containerization:
 2. **Docker lab** — taking a Spring Boot application and packaging it into a minimal, secure container image, including non-root user configuration and image size optimization.
 3. **Multi-stage build lab** — separating build and runtime environments in a single Dockerfile to produce a smaller, more secure final image.
 4. **Environment variables lab** — managing configuration across environments (development, staging, production) using Docker's different mechanisms for passing environment variables.
+5. **Volumes and bind mounts lab** — persisting container data with named volumes and serving live-editable content from the host with bind mounts.
+6. **Custom network lab** — connecting containers over a user-defined Docker network and verifying DNS-based service discovery and network isolation.
 
 ## Prerequisites
 Varies per lab — see each lab's own README for exact versions and setup. In general:
 - Java JDK 17
 - Gradle and/or Maven
 - Docker
-- Python 3 (for lab-6)
-  
+- Python 3 (for lab-6, lab-8)
+
 ## Learning Outcomes
 Across these labs:
 - Configuring and running Java builds with both Gradle and Maven
@@ -35,6 +39,8 @@ Across these labs:
 - Building, running, and verifying a containerized service
 - Writing multi-stage Dockerfiles to reduce image size
 - Managing environment-specific configuration via CLI flags, env files, and Dockerfile defaults
+- Persisting data with Docker volumes vs. live host content with bind mounts
+- Creating custom Docker networks and verifying container-to-container communication
 
 ## Author
 Mamdouh ([@mamdouhhz](https://github.com/mamdouhhz))
