@@ -13,9 +13,10 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 | [`lab-7`](./lab-7) | Docker volumes and bind mounts with Nginx | Docker, Nginx |
 | [`lab-8`](./lab-8) | Custom Docker network for microservice communication | Python, Flask, Docker |
 | [`lab-9`](./lab-9) | Containerized Node.js + MySQL stack with Docker Compose, health/readiness checks, and Docker Hub image push | Node.js, Express, MySQL, Docker Compose |
+| [`lab-10&11`](./lab-10&11) | Node isolation via taints, and namespace-scoped resource quota enforcement on a multi-node cluster | Kubernetes, minikube |
 
 ## Overview
-These labs progress from core Java build tooling to containerization:
+These labs progress from core Java build tooling to containerization and orchestration:
 
 1. **Gradle & Maven labs** — understanding the Java build lifecycle: compiling, testing, dependency management, and generating runnable jar artifacts using the two most common JVM build tools.
 2. **Docker lab** — taking a Spring Boot application and packaging it into a minimal, secure container image, including non-root user configuration and image size optimization.
@@ -24,6 +25,7 @@ These labs progress from core Java build tooling to containerization:
 5. **Volumes and bind mounts lab** — persisting container data with named volumes and serving live-editable content from the host with bind mounts.
 6. **Custom network lab** — connecting containers over a user-defined Docker network and verifying DNS-based service discovery and network isolation.
 7. **Docker Compose lab** — orchestrating a multi-container Node.js + MySQL stack with a single `docker-compose.yml`, verifying application health/readiness endpoints and log output, and publishing the resulting image to Docker Hub.
+8. **Kubernetes scheduling & governance lab** — running a multi-node cluster, isolating a node from the scheduler with taints, and enforcing per-namespace resource limits with a `ResourceQuota`.
 
 ## Prerequisites
 Varies per lab — see each lab's own README for exact versions and setup. In general:
@@ -33,6 +35,7 @@ Varies per lab — see each lab's own README for exact versions and setup. In ge
 - Docker Compose
 - Python 3 (for lab-6, lab-8)
 - Node.js 18 (for lab-9)
+- minikube and kubectl (for lab-10&11)
 
 ## Learning Outcomes
 Across these labs:
@@ -48,6 +51,9 @@ Across these labs:
 - Orchestrating multi-service apps with Docker Compose, including service dependencies, environment variables, and named volumes
 - Verifying application health via `/health` and `/ready` endpoints and inspecting log output
 - Publishing built images to Docker Hub
+- Running and inspecting a multi-node Kubernetes cluster
+- Controlling pod scheduling with node taints
+- Managing namespaces and enforcing resource quotas, both imperatively and declaratively
 
 ## Author
 Mamdouh ([@mamdouhhz](https://github.com/mamdouhhz))

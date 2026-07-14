@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: ivolve-pod-quota
+  namespace: ivolve
+spec:
+  hard:
+    pods: "2"
+
+# imperative command to create the resource quota:
+# kubectl create quota ivolve-pod-quota --hard=pods=2 -n ivolve
