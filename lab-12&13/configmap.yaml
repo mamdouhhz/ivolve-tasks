@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: ivolve
+data:
+  DB_HOST: mysql
+  DB_USER: root
+
+# imperative command to create the ConfigMap from a literal value:
+# kubectl create configmap mysql-config --from-literal=DB_HOST=mysql --from-literal=DB_USER=root -n ivolve
