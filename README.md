@@ -14,6 +14,8 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 | [`lab-8`](./lab-8) | Custom Docker network for microservice communication | Python, Flask, Docker |
 | [`lab-9`](./lab-9) | Containerized Node.js + MySQL stack with Docker Compose, health/readiness checks, and Docker Hub image push | Node.js, Express, MySQL, Docker Compose |
 | [`lab-10&11`](./lab-10&11) | Node isolation via taints, and namespace-scoped resource quota enforcement on a multi-node cluster | Kubernetes, minikube |
+| [`lab-12&13`](./lab-12&13) | ConfigMap/Secret-based configuration management and persistent storage provisioning (PV/PVC) | Kubernetes, minikube |
+| [`lab-14`](./lab-14) | MySQL StatefulSet with a headless Service, PVC-backed storage, and secret-based root password | Kubernetes, minikube, MySQL |
 
 ## Overview
 These labs progress from core Java build tooling to containerization and orchestration:
@@ -26,6 +28,8 @@ These labs progress from core Java build tooling to containerization and orchest
 6. **Custom network lab** — connecting containers over a user-defined Docker network and verifying DNS-based service discovery and network isolation.
 7. **Docker Compose lab** — orchestrating a multi-container Node.js + MySQL stack with a single `docker-compose.yml`, verifying application health/readiness endpoints and log output, and publishing the resulting image to Docker Hub.
 8. **Kubernetes scheduling & governance lab** — running a multi-node cluster, isolating a node from the scheduler with taints, and enforcing per-namespace resource limits with a `ResourceQuota`.
+9. **Kubernetes configuration & storage lab** — separating non-sensitive config (`ConfigMap`) from sensitive credentials (`Secret`), and provisioning persistent storage (`PersistentVolume`/`PersistentVolumeClaim`) for application logging.
+10. **Kubernetes stateful workload lab** — running MySQL as a `StatefulSet` with a headless Service for stable pod DNS, PVC-backed data storage, and root credentials sourced from a `Secret`.
 
 ## Prerequisites
 Varies per lab — see each lab's own README for exact versions and setup. In general:
@@ -35,7 +39,7 @@ Varies per lab — see each lab's own README for exact versions and setup. In ge
 - Docker Compose
 - Python 3 (for lab-6, lab-8)
 - Node.js 18 (for lab-9)
-- minikube and kubectl (for lab-10&11)
+- minikube and kubectl (for lab-10&11 onward)
 
 ## Learning Outcomes
 Across these labs:
@@ -54,6 +58,9 @@ Across these labs:
 - Running and inspecting a multi-node Kubernetes cluster
 - Controlling pod scheduling with node taints
 - Managing namespaces and enforcing resource quotas, both imperatively and declaratively
+- Separating non-sensitive configuration from sensitive credentials with ConfigMaps and Secrets
+- Provisioning and binding persistent storage with PersistentVolumes and PersistentVolumeClaims
+- Deploying stateful workloads with StatefulSets and headless Services for stable network identity
 
 ## Author
 Mamdouh ([@mamdouhhz](https://github.com/mamdouhhz))
