@@ -4,8 +4,8 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 
 ## Repo Structure
 - `build_tools/` — Java build tooling labs (lab-1, lab-2)
-- `containerization/` — Docker labs (lab-3&4 through lab-9)
-- `k8s/` — Kubernetes labs (lab-10&11 onward)
+- `containerization/` — Docker labs (lab-3&4 to lab-9)
+- `k8s/` — Kubernetes labs (lab-10&11 to lab-20)
 
 ## Labs
 
@@ -34,6 +34,9 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 | [`lab-15`](./k8s/lab-15) | Node.js Deployment (2 replicas) with ConfigMap/Secret env vars, node toleration, PVC-backed logging, and a ClusterIP Service | Kubernetes, minikube, Node.js |
 | [`lab-16`](./k8s/lab-16) | Init container for pre-deployment MySQL database and app-user provisioning | Kubernetes, minikube, MySQL |
 | [`lab-17`](./k8s/lab-17) | CPU/memory resource requests and limits, verified via `describe pod` and `kubectl top pod` | Kubernetes, minikube, metrics-server |
+| [`lab-18`](./k8s/lab-18) | NetworkPolicy restricting MySQL ingress to app pods only, on port 3306 | Kubernetes, minikube |
+| [`lab-19`](./k8s/lab-19) | Node-wide DaemonSet for Prometheus node-exporter, plus a bonus Prometheus/Grafana/Alertmanager stack with Gmail alerting | Kubernetes, minikube, Prometheus, Grafana, Alertmanager |
+| [`lab-20`](./k8s/lab-20) | RBAC: ServiceAccount, Role, and RoleBinding granting read-only Pod access | Kubernetes, minikube |
 
 ## Overview
 These labs progress from core Java build tooling to containerization and orchestration:
@@ -51,6 +54,9 @@ These labs progress from core Java build tooling to containerization and orchest
 11. **Kubernetes app deployment lab** — deploying the Node.js app as a `Deployment` wired to the ConfigMap/Secret and PVC, exposed via a `ClusterIP` Service.
 12. **Kubernetes init container lab** — using an init container to provision the app database and user before the main app container starts.
 13. **Kubernetes resource management lab** — setting CPU/memory requests and limits on the app container, and monitoring live usage with `metrics-server`.
+14. **Kubernetes network policy lab** — restricting pod-to-pod traffic so only the app pods can reach MySQL, on its default port.
+15. **Kubernetes cluster monitoring lab** — running Prometheus node-exporter as a DaemonSet across every node, with a bonus full monitoring stack (Prometheus, Grafana, Alertmanager) alerting to Gmail.
+16. **Kubernetes RBAC lab** — scoping a ServiceAccount to least-privilege, read-only Pod access via a Role and RoleBinding.
 
 ## Prerequisites
 Varies per lab — see each lab's own README for exact versions and setup. In general:
@@ -61,6 +67,7 @@ Varies per lab — see each lab's own README for exact versions and setup. In ge
 - Python 3 (for containerization/lab-6, lab-8)
 - Node.js 18 (for containerization/lab-9)
 - minikube and kubectl (for k8s/lab-10&11 onward)
+- Helm (for k8s/lab-19 bonus)
 
 ## Learning Outcomes
 Across these labs:
@@ -85,6 +92,9 @@ Across these labs:
 - Deploying application workloads with Deployments and exposing them internally via ClusterIP Services
 - Using init containers to sequence pre-deployment setup tasks
 - Setting and verifying pod resource requests/limits, and monitoring live usage with metrics-server
+- Restricting pod-to-pod network traffic with NetworkPolicies
+- Running node-level monitoring with DaemonSets, and building a full metrics/alerting stack with Prometheus, Grafana, and Alertmanager
+- Securing cluster access with RBAC: ServiceAccounts, Roles, and RoleBindings scoped to least privilege
 
 ## Author
 Mamdouh ([@mamdouhhz](https://github.com/mamdouhhz))
