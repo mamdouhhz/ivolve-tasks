@@ -36,27 +36,8 @@ Each folder is a standalone lab with its own README, prerequisites, and run inst
 | [`lab-17`](./k8s/lab-17) | CPU/memory resource requests and limits, verified via `describe pod` and `kubectl top pod` | Kubernetes, minikube, metrics-server |
 | [`lab-18`](./k8s/lab-18) | NetworkPolicy restricting MySQL ingress to app pods only, on port 3306 | Kubernetes, minikube |
 | [`lab-19`](./k8s/lab-19) | Node-wide DaemonSet for Prometheus node-exporter, plus a bonus Prometheus/Grafana/Alertmanager stack with Gmail alerting | Kubernetes, minikube, Prometheus, Grafana, Alertmanager |
-| [`lab-20`](./k8s/lab-20) | RBAC: ServiceAccount, Role, and RoleBinding granting read-only Pod access | Kubernetes, minikube |
+| [`lab-20`](./k8s/lab-20)   | RBAC: ServiceAccount, Role, and RoleBinding granting read-only Pod access | Kubernetes, minikube |
 
-## Overview
-These labs progress from core Java build tooling to containerization and orchestration:
-
-1. **Gradle & Maven labs** — understanding the Java build lifecycle: compiling, testing, dependency management, and generating runnable jar artifacts using the two most common JVM build tools.
-2. **Docker lab** — taking a Spring Boot application and packaging it into a minimal, secure container image, including non-root user configuration and image size optimization.
-3. **Multi-stage build lab** — separating build and runtime environments in a single Dockerfile to produce a smaller, more secure final image.
-4. **Environment variables lab** — managing configuration across environments (development, staging, production) using Docker's different mechanisms for passing environment variables.
-5. **Volumes and bind mounts lab** — persisting container data with named volumes and serving live-editable content from the host with bind mounts.
-6. **Custom network lab** — connecting containers over a user-defined Docker network and verifying DNS-based service discovery and network isolation.
-7. **Docker Compose lab** — orchestrating a multi-container Node.js + MySQL stack with a single `docker-compose.yml`, verifying application health/readiness endpoints and log output, and publishing the resulting image to Docker Hub.
-8. **Kubernetes scheduling & governance lab** — running a multi-node cluster, isolating a node from the scheduler with taints, and enforcing per-namespace resource limits with a `ResourceQuota`.
-9. **Kubernetes configuration & storage lab** — separating non-sensitive config (`ConfigMap`) from sensitive credentials (`Secret`), and provisioning persistent storage (`PersistentVolume`/`PersistentVolumeClaim`) for application logging.
-10. **Kubernetes stateful workload lab** — running MySQL as a `StatefulSet` with a headless Service for stable pod DNS, PVC-backed data storage, and root credentials sourced from a `Secret`.
-11. **Kubernetes app deployment lab** — deploying the Node.js app as a `Deployment` wired to the ConfigMap/Secret and PVC, exposed via a `ClusterIP` Service.
-12. **Kubernetes init container lab** — using an init container to provision the app database and user before the main app container starts.
-13. **Kubernetes resource management lab** — setting CPU/memory requests and limits on the app container, and monitoring live usage with `metrics-server`.
-14. **Kubernetes network policy lab** — restricting pod-to-pod traffic so only the app pods can reach MySQL, on its default port.
-15. **Kubernetes cluster monitoring lab** — running Prometheus node-exporter as a DaemonSet across every node, with a bonus full monitoring stack (Prometheus, Grafana, Alertmanager) alerting to Gmail.
-16. **Kubernetes RBAC lab** — scoping a ServiceAccount to least-privilege, read-only Pod access via a Role and RoleBinding.
 
 ## Prerequisites
 Varies per lab — see each lab's own README for exact versions and setup. In general:
